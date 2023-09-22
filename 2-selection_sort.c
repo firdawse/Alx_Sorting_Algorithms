@@ -17,7 +17,7 @@ void swap_ints(int *f, int *s)
 /**
  * selection_sort - This sorts the an array of given
  * interger in a given order.
- * @array: This is an array of integers.
+ * @array: This is an array of integers to be returned.
  * @size: This returns the  size of the array.
  * Description: This prints the an array after each swap.
  */
