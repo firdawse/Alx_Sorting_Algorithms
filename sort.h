@@ -6,11 +6,10 @@
 
 
 /**
- * struct listint_s - Doubly linked list node
- *
- * @n: Integer stored in the node
- * @prev: Pointer to the previous element of the list
- * @next: Pointer to the next element of the list
+ * struct listint_s - This is a Doubly linked list node
+ * @n: Integer stored in the node present
+ * @prev: Pointer to the previous element of the lists
+ * @next: Pointer to the next element of the lists
  */
 typedef struct listint_s
 {
