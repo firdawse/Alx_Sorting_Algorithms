@@ -25,5 +25,6 @@ void bubble_sort(int *array, size_t size);
 /*Sorting algorithms*/
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void swap_ints(int *f, int *s);
 
 #endif
