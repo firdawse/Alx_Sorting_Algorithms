@@ -6,7 +6,7 @@
  * @first: The first position of the partition.
  * @last: The last position of the partition
  * @size: An array size to be returned.
- * Return: This is the int pivoted index
+ * Return: This is the int pivoted index to be returned.
  */
 int partition(int *array, int first, int last, size_t size)
 {
