@@ -1,6 +1,20 @@
 #include "sort.h"
 
 /**
+ * swap_ints - This swaps two integers in an array.
+ * @f: The first integer to be swaped.
+ * @s: The second integer to be swaped
+ */
+void swap_ints(int *f, int *s)
+{
+	int temp;
+
+	temp = *f;
+	*f = *s;
+	*s = temp;
+}
+
+/**
  * selection_sort - This sorts the an array of given
  * interger in a given order.
  * @array: This is an array of integers to be returned.
@@ -9,31 +23,22 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0, j = 0, idx = 0;
-	int tmp = 0;
+	int *mn;
+	size_t k, jj;
 
-	if (size <= 1)
+	if (array == NULL || size < 2)
 		return;
-	while (i < size - 1)
+
+	for (k = 0; k < size - 1; k++)
 	{
-		idx = i;
-		tmp = array[i];
-		j = i + 1;
-		while (j < size)
+		mn = array + k;
+		for (jj = k + 1; jj < size; jj++)
+			mn = (array[jj] < *mn) ? (array + jj) : mn;
+
+		if ((array + k) != mn)
 		{
-			if (array[j] < tmp)
-            {
-                tmp = array[j];
-                idx = j;
-            }
-			j++;
-		}
-		if (idx != i)
-		{
-			array[idx] = array[i];
-			array[i] = tmp;
+			swap_ints(array + k, mn);
 			print_array(array, size);
 		}
-		i++;
 	}
 }
