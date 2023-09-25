@@ -29,5 +29,10 @@ void swap_ints(int *f, int *s);
 void swap(listint_t **node, listint_t **list);
 void insertion_sort_list(listint_t **list);
 void shell_sort(int *array, size_t size);
+void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void swap_ints(int *c, int *d);
+void max_heapify(int *array, size_t size, size_t base, size_t root);
+void heap_sort(int *array, size_t size);
 
 #endif
